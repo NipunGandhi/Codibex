@@ -7,10 +7,13 @@ class CardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var a = MediaQuery.of(context).size;
+    print(a.height / 3.2);
+    print("card");
     return Container(
       padding: const EdgeInsets.all(3),
-      width: 265,
-      height: 366,
+      width: a.height / 3.2,
+      height: a.height / 2.4463,
       decoration: BoxDecoration(
         border: Border.all(color: const Color(0xff919cb3)),
         color: const Color(0xffffffff),
@@ -27,8 +30,11 @@ class CardWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          const Image(
-            image: AssetImage("assets/images/Card Pic.png"),
+          Image(
+            height: a.height / 6.66,
+            width: a.height / 3.2,
+            fit: BoxFit.fill,
+            image: const AssetImage("assets/images/Card Pic.png"),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 8.0, left: 8, bottom: 4),
@@ -37,7 +43,7 @@ class CardWidget extends StatelessWidget {
                 Container(
                   margin: const EdgeInsets.fromLTRB(0, 0, 8, 0),
                   width: 59,
-                  height: 20,
+                  height: a.height / 43.3, //20
                   decoration: BoxDecoration(
                     color: const Color(0xfffff5db),
                     borderRadius: BorderRadius.circular(20),
@@ -56,21 +62,21 @@ class CardWidget extends StatelessWidget {
                   ),
                 ),
                 Row(
-                  children: const [
+                  children: [
                     Image(
-                      height: 6,
+                      height: a.height / 144.3, //6
                       width: 6,
                       image: AssetImage("assets/images/colored_dot.png"),
                     ),
                     SizedBox(width: 2),
                     Image(
-                      height: 6,
+                      height: a.height / 144.3,
                       width: 6,
                       image: AssetImage("assets/images/empty_dot.png"),
                     ),
                     SizedBox(width: 2),
                     Image(
-                      height: 6,
+                      height: a.height / 144.3,
                       width: 6,
                       image: AssetImage("assets/images/empty_dot.png"),
                     ),
@@ -94,18 +100,18 @@ class CardWidget extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(left: 8.0, top: 4),
             child: Text(
-              "Diabetes is common in the summer time and so on and so fort the disease has this this issues. It is common in the summer time and so on and so fort the ...",
+              "Diabetes is",
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
               ),
             ),
           ),
-          const SizedBox(
-            height: 6,
+          SizedBox(
+            height: a.height / 144.3, //6
           ),
           SizedBox(
-            height: 54,
+            height: a.height / 16.03, //54
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [

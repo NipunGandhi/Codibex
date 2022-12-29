@@ -8,10 +8,11 @@ class FakeCardWidget extends StatelessWidget {
   final double height;
   @override
   Widget build(BuildContext context) {
+    var a = MediaQuery.of(context).size;
     return Container(
       padding: const EdgeInsets.all(3),
-      width: 265,
-      height: height + 35,
+      width: a.height / 3.2,
+      height: height,
       decoration: BoxDecoration(
         border: Border.all(color: const Color(0xff919cb3)),
         color: const Color(0xffffffff),
@@ -28,8 +29,11 @@ class FakeCardWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          const Image(
-            image: AssetImage("assets/images/Card Pic.png"),
+          Image(
+            height: a.height / 6.66,
+            width: a.height / 3.2,
+            fit: BoxFit.fill,
+            image: const AssetImage("assets/images/Card Pic.png"),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 8.0, left: 8, bottom: 4),

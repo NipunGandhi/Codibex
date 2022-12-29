@@ -16,6 +16,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     var a = MediaQuery.of(context);
+    print(a.size.height);
+    print(a.size.width);
     return Scaffold(
       body: Stack(
         children: [
@@ -35,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
           //Icons,Name,Message and reports
           Container(
             padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
-            height: 270,
+            height: a.size.height / 3.126353790613718,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -175,61 +177,64 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 25),
-
+                SizedBox(
+                  height: a.size.height / 40.5,
+                ),
                 //Stack of cards
                 SizedBox(
-                  height: a.size.height - (a.size.height / 1.75),
+                  height: a.size.height - (a.size.height / 1.74),
                   child: Stack(
                     children: [
                       Positioned(
                         top: 15,
-                        left: 25,
+                        left: a.size.height > 700 ? 25 : 45,
                         child: Transform.rotate(
                           angle: -0.14,
-                          child: const FakeCardWidget(height: 280),
+                          child: FakeCardWidget(height: a.size.height / 2.858),
                         ),
                       ),
                       Positioned(
                         top: 8,
-                        left: 45,
+                        left: a.size.height > 700 ? 45 : 75,
                         child: Transform.rotate(
                           angle: -0.08,
-                          child: const FakeCardWidget(height: 300),
+                          child: FakeCardWidget(height: a.size.height / 2.681),
                         ),
                       ),
                       Positioned(
                         top: 15,
-                        right: 25,
+                        right: a.size.height > 700 ? 25 : 45,
                         child: Transform.rotate(
                           angle: 0.14,
-                          child: const FakeCardWidget(height: 280),
+                          child: FakeCardWidget(height: a.size.height / 2.858),
                         ),
                       ),
                       Positioned(
                         top: 8,
-                        right: 45,
+                        right: a.size.height > 700 ? 45 : 75,
                         child: Transform.rotate(
                           angle: 0.08,
-                          child: const FakeCardWidget(height: 300),
+                          child: FakeCardWidget(height: a.size.height / 2.681),
                         ),
                       ),
-                      const Positioned(
-                        right: 75,
+                      Positioned(
+                        right: a.size.height > 700 ? 75 : 95,
                         child: CardWidget(),
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 15),
+                SizedBox(
+                  height: a.size.height / 45.5,
+                ),
 
                 //Book Lab Test, Already Tested Button
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 130,
-                      height: 50,
+                      width: a.size.width / 3.39,
+                      height: a.size.height / 17.32,
                       decoration: BoxDecoration(
                         border: Border.all(color: const Color(0xffaf3aff)),
                         color: const Color(0xffaf3aff),
@@ -252,8 +257,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 10,
                     ),
                     Container(
-                      width: 130,
-                      height: 50,
+                      width: a.size.width / 3.39,
+                      height: a.size.height / 17.32,
                       decoration: BoxDecoration(
                         border: Border.all(color: const Color(0xffaf3aff)),
                         color: const Color(0xffffffff),
@@ -274,13 +279,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 20),
+                SizedBox(
+                  height: a.size.height / 45.5,
+                ),
 
                 //Buttons
                 Material(
                   elevation: 10,
                   child: Container(
-                    height: 60,
+                    height: a.size.height / 14.43,
                     width: double.infinity,
                     decoration: const BoxDecoration(
                       color: Colors.white,
