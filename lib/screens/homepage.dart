@@ -16,8 +16,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     var a = MediaQuery.of(context);
-    print(a.size.height);
-    print(a.size.width);
+    print(a.size.height / 3.126353790613718);
+    print("abc");
     return Scaffold(
       body: Stack(
         children: [
@@ -129,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
           //Menu Icon
           Positioned(
             left: 45,
-            top: 67,
+            top: ((a.size.height / 3.126353790613718) / 3.97),
             child: Container(
               width: 16,
               height: 16,
@@ -187,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       Positioned(
                         top: 15,
-                        left: a.size.height > 700 ? 25 : 45,
+                        left: 20 + (270 - (a.size.height / 3.2)) / 2,
                         child: Transform.rotate(
                           angle: -0.14,
                           child: FakeCardWidget(height: a.size.height / 2.858),
@@ -195,7 +195,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Positioned(
                         top: 8,
-                        left: a.size.height > 700 ? 45 : 75,
+                        left: 40 + (270 - (a.size.height / 3.2)) / 2,
                         child: Transform.rotate(
                           angle: -0.08,
                           child: FakeCardWidget(height: a.size.height / 2.681),
@@ -203,7 +203,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Positioned(
                         top: 15,
-                        right: a.size.height > 700 ? 25 : 45,
+                        right: 25 + (270 - (a.size.height / 3.2)) / 2,
                         child: Transform.rotate(
                           angle: 0.14,
                           child: FakeCardWidget(height: a.size.height / 2.858),
@@ -211,14 +211,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Positioned(
                         top: 8,
-                        right: a.size.height > 700 ? 45 : 75,
+                        right: 45 + (270 - (a.size.height / 3.2)) / 2,
                         child: Transform.rotate(
                           angle: 0.08,
                           child: FakeCardWidget(height: a.size.height / 2.681),
                         ),
                       ),
                       Positioned(
-                        right: a.size.height > 700 ? 75 : 95,
+                        right: 75 + (270 - (a.size.height / 3.2)) / 2,
                         child: CardWidget(),
                       ),
                     ],

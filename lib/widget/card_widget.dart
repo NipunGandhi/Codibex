@@ -66,19 +66,19 @@ class CardWidget extends StatelessWidget {
                     Image(
                       height: a.height / 144.3, //6
                       width: 6,
-                      image: AssetImage("assets/images/colored_dot.png"),
+                      image: const AssetImage("assets/images/colored_dot.png"),
                     ),
-                    SizedBox(width: 2),
+                    const SizedBox(width: 2),
                     Image(
                       height: a.height / 144.3,
                       width: 6,
-                      image: AssetImage("assets/images/empty_dot.png"),
+                      image: const AssetImage("assets/images/empty_dot.png"),
                     ),
-                    SizedBox(width: 2),
+                    const SizedBox(width: 2),
                     Image(
                       height: a.height / 144.3,
                       width: 6,
-                      image: AssetImage("assets/images/empty_dot.png"),
+                      image: const AssetImage("assets/images/empty_dot.png"),
                     ),
                   ],
                 ),
@@ -97,19 +97,22 @@ class CardWidget extends StatelessWidget {
               ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 8.0, top: 4),
-            child: Text(
-              "Diabetes is",
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 14,
+          const Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(left: 8.0, top: 4),
+              child: Text(
+                "Diabetes is common in the summer time and so on and so fort the disease has this this issues. It is common in the summer time and so on and so fort the ...",
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 14,
+                ),
               ),
             ),
           ),
           SizedBox(
             height: a.height / 144.3, //6
           ),
+          //Last Row
           SizedBox(
             height: a.height / 16.03, //54
             child: ListView(
